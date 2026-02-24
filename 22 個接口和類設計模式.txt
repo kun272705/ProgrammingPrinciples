@@ -7,7 +7,7 @@
 // TextConverter builder = new TeXTextConverter();
    TextConverter builder = new TextWidgetConverter();
 
-while((Token token = tokenIterator.next()) != null) {
+while ((Token token = tokenIterator.next()) != null) {
 
   switch (token.type) {
 
