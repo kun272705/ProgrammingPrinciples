@@ -1,0 +1,88 @@
+
+第 01 個：Pipe and Filter
+
+把過濾器組織成流水綫。
+
+第 02 個：Uniform Pipe and Filter
+
+把過濾器組織成流水綫，而且讓所有過濾器采用統一的接口。
+
+第 03 個：Replicated Repository
+
+通過複製的倉庫提供鏡像的服務。
+
+第 04 個：Cache
+
+緩存響應。
+
+第 05 個：Client-Server
+
+把系統拆分成 Client 和 Server。
+
+第 06 個：Layered System
+
+對系統進行分層，讓每一層都只為其上一層提供服務，每一層都只使用其下一層提供的服務。
+
+第 07 個：Layered-Client-Server
+
+把系統拆分成 Client、Proxy、Gateway 和 Server，同時對系統進行分層，讓每一層都只為其上一層提供服務，每一層都只使用其下一層提供的服務。
+
+第 08 個：Client-Stateless-Server
+
+把系統拆分成 Client 和 Server，不讓 Server 保持 Session State。
+
+第 09 個：Client-Cache-Stateless-Server
+
+把系統拆分成 Client 和 Server，讓 Client 緩存響應，不讓 Server 保持 Session State。
+
+第 10 個：Layered-Client-Cache-Stateless-Server
+
+把系統拆分成 Client、Proxy、Gateway 和 Server，同時對系統進行分層，讓每一層都只為其上一層提供服務，每一層都只使用其下一層提供的服務，讓上層緩存響應，不讓下層保持 Session State。
+
+第 11 個：Remote Session
+
+把系統拆分成 Client 和 Server，不讓 Client 保持 Session State，讓 Server 保持 Session State。
+
+第 12 個：Remote Data Access
+
+把系統拆分成 Client 和 Server，讓 Client 和 Server 都保持 Session State。
+
+第 13 個：Virtual Machine
+
+使用虛擬機屏蔽執行平臺差異。
+
+第 14 個：Remote Evaluation
+
+把系統拆分成 Client 和 Server，使用虛擬機屏蔽執行平臺差異，讓 Client 將代碼發送到 Server 上執行。
+
+第 15 個：Code on Demand
+
+把系統拆分成 Client 和 Server，使用虛擬機屏蔽執行平臺差異，讓 Client 向 Server 請求代碼然後執行。
+
+第 16 個：Layered-Code-on-Demand-Client-Cache-Stateless-Server
+
+把系統拆分成 Client、Proxy、Gateway 和 Server，同時對系統進行分層，讓每一層都只為其上一層提供服務，每一層都只使用其下一層提供的服務，使用虛擬機屏蔽執行平臺差異，讓上層向下層請求代碼然後執行，讓上層緩存響應，不讓下層保持 Session State。
+
+第 17 個：Mobile Agent
+
+將能力躰移動到用戶需要的位置上運行。
+
+第 18 個：Event-based Integration
+
+讓 Component 通過 Event Bus 訂閲話題和廣播事件，當事件發生時，Event Bus 通知訂閲了的 Component。
+
+第 19 個：Component and Connector
+
+把消息處理功能獨立出來，放到 Connector 中，讓 Connector 能夠獨立變化。
+
+第 20 個：Distributed Objects
+
+用分佈式對象組成系統。
+
+第 21 個：Brokered Distributed Objects
+
+用分佈式對象組成系統，而且通過服務發現和名字解析獲取對象。
+
+第 22 個：Hypertext Transfer
+
+把系統拆分成 Client、Proxy、Gateway 和 Server，同時對系統進行分層，讓每一層都只為其上一層提供服務，每一層都只使用其下一層提供的服務，使用虛擬機屏蔽執行平臺差異，讓上層向下層請求代碼然後執行，讓上層緩存響應，不讓下層保持 Session State，讓所有層采用統一的接口。

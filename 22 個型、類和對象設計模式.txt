@@ -1,0 +1,220 @@
+
+第 01 個：Builder
+
+用戶委托 Builder：
+
+// TextConverter builder = new ASCIITextConverter();
+// TextConverter builder = new TeXTextConverter();
+   TextConverter builder = new TextWidgetConverter();
+
+while((Token token = tokenIterator.next()) != null) {
+
+  switch (token.type) {
+
+    case CHARACTER:
+
+      builder.convertCharacter(token.character);
+
+      break;
+
+    case FONT_CHANGE:
+
+      builder.convertFontChange(token.fontChange);
+
+      break;
+
+    case PARAGRAPH:
+
+      builder.convertParagraph();
+
+      break;
+  }
+}
+
+// ASCIIText result = builder.getASCIIText();
+// TeXText result = builder.getTeXText();
+   TextWidget result = builder.getTextWidget();
+
+第 02 個：Factory
+
+用戶委托 Factory：
+
+// WidgetFactory factory = new PMWidgetFactory();
+   WidgetFactory factory = new MotifWidgetFactory();
+
+Window window = factory.createWindow();
+ScrollBar scrollBar = factory.createScrollBar();
+
+第 03 個：Prototype
+
+問題：想讓一個對象返回一個自己的克隆體。
+
+辦法：給這個對象增加一個 clone 辦法，在 clone 辦法中調用構造器並傳入 this，讓構造器將對象的狀態複製給新創建的對象然後返回。
+
+第 04 個：Singleton
+
+問題：想讓一個類擁有一組固定的實例。
+
+辦法：把這些實例存儲在類的靜態字段中，並提供一個靜態辦法，負責按需返回這些實例。
+
+第 05 個：Adapter
+
+問題：想在不修改已有類的前提下改變已有類的型。
+
+辦法一：讓包裝類繼承已有類。
+
+辦法二：讓包裝類的實例委托已有類的實例。
+
+第 06 個：Intermediate Layer
+
+用戶委托 Window：
+
+// Window window = new IconWindow();
+   Window window = new TransientWindow();
+
+window.drawBorder();
+window.drawCloseButton();
+
+Window 具體類繼承 Window 抽象類：
+
+drawRect();
+drawText();
+
+Window 抽象類委托 WindowImp：
+
+// WindowImp windowImp = new XWindowImp();
+   WindowImp windowImp = new PMWindowImp();
+
+windowImp.devDrawLine();
+windowImp.devDrawText();
+
+第 07 個：Composite
+
+問題：想讓用戶通過同一個型使用單一部件和合成部件。
+
+辦法：讓合成部件將用戶請求轉發給它的所有内部部件。
+
+第 08 個：Decorator
+
+問題：想讓用戶通過同一個型使用原始類和裝飾類。
+
+辦法：讓裝飾類的實例委托原始類的實例。
+
+第 09 個：Facade
+
+問題：一個系統包含了多個子系統，但是它沒有外觀，用戶希望我們提供一個缺省的外觀。
+
+辦法：提供一個缺省的外觀。
+
+第 10 個：Flyweight
+
+問題：想用一個角色表示多個個體。
+
+辦法：將對象和個性狀態解耦。
+
+第 11 個：Proxy
+
+問題：想讓用戶通過同一個型使用實體類和代理類。
+
+辦法：讓代理類的實例委托實體類的實例。
+
+第 12 個：Chain of Responsibility
+
+問題：想讓人民通過同一個型使用所有服務員。
+
+辦法：讓所有服務員實現同一個型。在服務員的每一個服務辦法中，要麽提供服務，要麽把請求轉發給他的直屬領導。
+
+第 13 個：Command
+
+MenuItem 委托 Command：
+
+Command findCommand = new FindCommand(application);
+findCommand.execute();
+
+Command replaceCommand = new ReplaceCommand(application);
+replaceCommand.execute();
+
+Command 委托 Application：
+
+Document document = application.getDocument();
+document.find(what);
+
+Document document = application.getDocument();
+document.replace(what, with);
+
+第 14 個：Interpreter
+
+問題：想讓用戶使用一種專門的領域語言表示信息。
+
+辦法：實現一個專門的解釋器。
+
+第 15 個：Iterator
+
+問題：想讓用戶以迭代的方式訪問集合元素。
+
+辦法：實現一個迭代器。
+
+第 16 個：Mediator
+
+Widget 委托 Mediator：
+
+mediator.widgetChanged(this);
+
+mediator.widgetChanged(this);
+
+Mediator 委托 Widget：
+
+listBox.getSelection();
+entryField.setText();
+
+entryField.getText();
+listBox.setSelection();
+
+第 17 個：Memento
+
+問題：想記錄一個對象的狀態的增量變更歷史以實現 undo/redo。
+
+辦法：使用一個帶頭節點的雙向鏈表存儲變更日志。
+
+第 18 個：Pub/Sub
+
+Subscriber 委托 Publisher：
+
+publisher.add(eventType, this);
+publisher.remove(eventType, this);
+
+Publisher 委托 Subscriber：
+
+subscriber.notice(event);
+
+第 19 個：State
+
+TCPConnection 委托 TCPState：
+
+// TCPState state = new TCPClosed();
+// TCPState state = new TCPListen();
+   TCPState state = new TCPEstablished();
+
+state.handle();
+
+第 20 個：Strategy
+
+Composition 委托 Compositor：
+
+// Compositor compositor = new SimpleCompositor();
+// Compositor compositor = new TeXCompositor();
+   Compositor compositor = new ArrayCompositor();
+
+compositor.compose();
+
+第 21 個：Method Template
+
+問題：想讓父類方法能夠調用子類方法。
+
+辦法：讓父類方法定義步驟，每個步驟調用一個抽象方法，讓子類實現這些抽象方法。
+
+第 22 個：Visitor
+
+Node 委托 Visitor：
+
+visitor.visitNode(this);
