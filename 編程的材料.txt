@@ -5,6 +5,6 @@
 
 第 2 种：Operators
 
-第 3 种：Control flow statements
+第 3 种：Control flow syntax
 
-第 4 种：User-defined interfaces and user-defined classes
+第 4 种：User-defined interfaces and classes
