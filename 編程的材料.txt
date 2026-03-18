@@ -3,8 +3,6 @@
 
 第 1 种：Primitvie data types
 
-第 2 种：Operators
+第 2 种：Operators and control flow statements
 
-第 3 种：Control flow syntax
-
-第 4 种：User-defined interfaces and classes
+第 3 种：User-defined interfaces and classes
