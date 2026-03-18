@@ -16,8 +16,6 @@
 第 1 段：Code segment
 
 Code segment contains executable code.
-Code segment is read only.
-Code segment has fixed size.
 
 第 2 段：Data segment
 
