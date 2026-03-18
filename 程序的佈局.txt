@@ -1,17 +1,17 @@
 
 程序的佈局
 
-|---------------|
-| Stack segment |
-|---------------|
-| Heap segment  |
-|---------------|
-| BSS segment   |
-|---------------|
-| Data segment  |
-|---------------|
-| Code segment  |
-|---------------|
+|-----------------|
+| Stack segment   |
+|-----------------|
+| Heap segment    |
+|-----------------|
+| BSS segment     |
+|-----------------|
+| Data segment    |
+|-----------------|
+| Code segment    |
+|-----------------|
 
 第 1 段：Code segment
 
