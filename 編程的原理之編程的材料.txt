@@ -1,8 +1,0 @@
-
-編程的原理之編程的材料
-
-第 1 种：primitvie data types
-
-第 2 种：operators 和 control flow statements
-
-第 3 种：user-defined interfaces and classes
