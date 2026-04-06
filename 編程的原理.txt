@@ -42,24 +42,22 @@ hello 程序調用了 printf 函數，printf 函數存在於一個名爲 printf.
 
 映像的佈局
 
-|-----------------|
-| Stack segment   |
-|-----------------|
-| Heap segment    |
-|-----------------|
-| BSS segment     |
-|-----------------|
-| Data segment    |
-|-----------------|
-| Code segment    |
-|-----------------|
+第 1 段：code segment
 
 The code segment contains executable instructions.
 
+第 2 段：data segment
+
 The data segment contains nonzero-initialized static/global variables.
+
+第 3 段：BSS segment
 
 The BSS segment contains uninitialized or zero-initialized static/global variables.
 
+第 4 段：heap segment
+
 The heap segment contains dynamically allocated memory.
+
+第 5 段：stack segment
 
 The stack segment contains the call stack.
