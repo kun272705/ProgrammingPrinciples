@@ -1,0 +1,8 @@
+
+映像的佈局
+
+第 1 段：The code segment contains executable instructions.
+第 2 段：The data segment contains nonzero-initialized static/global variables.
+第 3 段：The BSS segment contains uninitialized or zero-initialized static/global variables.
+第 4 段：The heap segment contains dynamically allocated memory.
+第 5 段：The stack segment contains the call stack.
