@@ -6,7 +6,7 @@
 用戶委托 Builder：
 // TextConverter builder = new ASCIITextConverter();
 // TextConverter builder = new TeXTextConverter();
-   TextConverter builder = new TextWidgetConverter();
+TextConverter builder = new TextWidgetConverter();
 while ((Token token = tokenIterator.next()) != null) {
   switch (token.type) {
     case CHARACTER:
@@ -22,13 +22,13 @@ while ((Token token = tokenIterator.next()) != null) {
 }
 // ASCIIText result = builder.getASCIIText();
 // TeXText result = builder.getTeXText();
-   TextWidget result = builder.getTextWidget();
+TextWidget result = builder.getTextWidget();
 
 第 02 個：Factory
 
 用戶委托 Factory：
 // WidgetFactory factory = new PMWidgetFactory();
-   WidgetFactory factory = new MotifWidgetFactory();
+WidgetFactory factory = new MotifWidgetFactory();
 Window window = factory.createWindow();
 ScrollBar scrollBar = factory.createScrollBar();
 
@@ -45,14 +45,13 @@ ScrollBar scrollBar = factory.createScrollBar();
 第 05 個：Adapter
 
 問題：想在不修改已有類的前提下改變已有類的型。
-辦法：讓包裝類繼承已有類。
-辦法：讓包裝類的實例委托已有類的實例。
+辦法：讓包裝類繼承已有類，或讓包裝類的實例委托已有類的實例。
 
 第 06 個：Intermediate Layer
 
 用戶委托 Window：
 // Window window = new IconWindow();
-   Window window = new TransientWindow();
+Window window = new TransientWindow();
 window.drawBorder();
 window.drawCloseButton();
 
@@ -62,7 +61,7 @@ drawText();
 
 Window 抽象類委托 WindowImp：
 // WindowImp windowImp = new XWindowImp();
-   WindowImp windowImp = new PMWindowImp();
+WindowImp windowImp = new PMWindowImp();
 windowImp.devDrawLine();
 windowImp.devDrawText();
 
@@ -124,13 +123,10 @@ document.replace(what, with);
 
 Widget 委托 Mediator：
 mediator.widgetChanged(this);
-mediator.widgetChanged(this);
 
 Mediator 委托 Widget：
 listBox.getSelection();
 entryField.setText();
-entryField.getText();
-listBox.setSelection();
 
 第 17 個：Memento
 
@@ -151,7 +147,7 @@ subscriber.notice(event);
 TCPConnection 委托 TCPState：
 // TCPState state = new TCPClosed();
 // TCPState state = new TCPListen();
-   TCPState state = new TCPEstablished();
+TCPState state = new TCPEstablished();
 state.handle();
 
 第 20 個：Strategy
@@ -159,7 +155,7 @@ state.handle();
 Composition 委托 Compositor：
 // Compositor compositor = new SimpleCompositor();
 // Compositor compositor = new TeXCompositor();
-   Compositor compositor = new ArrayCompositor();
+Compositor compositor = new ArrayCompositor();
 compositor.compose();
 
 第 21 個：Method Template
