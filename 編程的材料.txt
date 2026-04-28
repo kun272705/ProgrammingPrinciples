@@ -1,8 +1,8 @@
 
 編程的材料
 
-第 1 種：primitvie data types
-第 2 種：operators
-第 3 種：control flow statements
-第 4 種：user-defined interfaces
-第 5 種：user-defined classes
+第 1 種是 primitvie data types。
+第 2 種是 operators。
+第 3 種是 control flow statements。
+第 4 種是 user-defined interfaces。
+第 5 種是 user-defined classes。
