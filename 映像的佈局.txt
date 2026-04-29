@@ -3,6 +3,6 @@
 
 第 1 段是 code segment，the code segment contains executable instructions.
 第 2 段是 data segment，the data segment contains nonzero-initialized static/global variables.
-第 3 段是 BSS segment，the BSS segment contains uninitialized or zero-initialized static/global variables.
+第 3 段是 BSS segment，the BSS segment contains uninitialized/zero-initialized static/global variables.
 第 4 段是 heap segment，the heap segment contains dynamically allocated memory.
 第 5 段是 stack segment，the stack segment contains the call stack.
