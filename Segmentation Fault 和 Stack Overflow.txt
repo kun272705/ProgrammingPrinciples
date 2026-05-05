@@ -1,0 +1,6 @@
+
+Segment Fault 和 Stack Overflow
+
+當程序訪問一個它沒有權限訪問的内存地址時會發生 Segmentation Fault。
+
+每次函數調用都會在 Stack 中產生一個新的棧幀。當 Stack 空間不夠用時會發生 Stack Overflow。函數遞歸調用就是函數自己調用自己，由於每一次函數調用都會在 Stack 中產生一個新的棧幀，所以函數遞歸調用容易導致 Stack Overflow。

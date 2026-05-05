@@ -1,0 +1,6 @@
+
+Blocking IO API 和 Nonblocking IO API
+
+當綫程調用 Blocking IO API 后，綫程會被挂起，系統調用對應的 IO 操作結束后才會被喚醒。
+
+當綫程調用 Nonblocking IO API 后，綫程會被挂起，系統調用完成后就會被喚醒。

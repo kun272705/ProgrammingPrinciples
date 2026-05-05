@@ -1,0 +1,4 @@
+
+Event Loop
+
+使用非阻塞式 IO API 時，一般要在一個 Loop 中調用 select 系統調用，這個 Loop 被稱爲 Event Loop。

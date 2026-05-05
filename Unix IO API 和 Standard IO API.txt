@@ -1,0 +1,6 @@
+
+Unix IO API 和 Standard IO API
+
+Unix IO API 是 Unix 提供的 IO API。
+
+Standard IO API 是編程語言提供的 IO API，它封裝了 Unix IO API，並增加了一些特性。

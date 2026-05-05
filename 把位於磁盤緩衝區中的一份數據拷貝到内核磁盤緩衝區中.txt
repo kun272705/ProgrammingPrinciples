@@ -1,0 +1,6 @@
+
+把位於磁盤緩衝區中的一份數據拷貝到内核磁盤緩衝區中
+
+Indirect Memory Access Transfer：由 CPU 全程控制傳輸。
+
+Direct Memory Access Transfer：CPU 向 DMA Controller 發出傳輸指令，DMA Controller 控制傳輸，傳輸完成后 DMA Controller 中斷 CPU。
