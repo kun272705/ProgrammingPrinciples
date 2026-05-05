@@ -1,5 +1,5 @@
 
-編程的材料
+編程的原理：編程的材料
 
 第 1 種是 primitvie data types。
 第 2 種是 operators。
